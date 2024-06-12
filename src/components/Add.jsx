@@ -22,7 +22,7 @@ const Add = () => {
                         <label htmlFor="" className="label form-label">Employee Mobile</label>
                         <input type="text" className="input form-control" />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <button className="btn btn-success">ADD</button>
                         </div>
                     </div>
