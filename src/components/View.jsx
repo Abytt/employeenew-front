@@ -1,9 +1,10 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 const View = () => {
     return (
         <div>
-
+<NavBar/>
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -15,29 +16,23 @@ const View = () => {
                                     <thead>
                                         <tr>
 
-                                            <th scope="col">Emp</th>
-                                            <th scope="col">c_descr</th>
-                                            <th scope="col">c_date</th>
-                                            <th scope="col">c_duration</th>
-                                            <th scope="col">trainer_name</th>
+                                            <th scope="col">Emp_name</th>
+                                            <th scope="col">Emp_code</th>
+                                            <th scope="col">Emp_mobile</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {
-                                            data.map(
-                                                (value, index) => {
-                                                    return <tr>
+                                        <tr>
 
-                                                        <td>{value.c_name}</td>
-                                                        <td>{value.c_descr}</td>
-                                                        <td>{value.c_date}</td>
-                                                        <td>{value.c_duration}</td>
-                                                        <td>{value.trainer_name}</td>
-                                                    </tr>
-                                                }
-                                            )
+                                            <td>p_name</td>
+                                            <td>p_name</td>
+                                            <td>p_name</td>
+                                           
+                                        </tr>
 
-                                        }
+
+
 
                                     </tbody>
                                 </table>
