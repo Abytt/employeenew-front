@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import NavBar from './NavBar'
+import axios from 'axios'
 
 const Add = () => {
     const [data, setdata] = useState([
@@ -35,18 +36,18 @@ const Add = () => {
                             <div className="row g-3">
                                 <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <label htmlFor="" className="label form-label">Employee Name</label>
-                                    <input type="text" className="input form-control" />
+                                    <input type="text" className="input form-control" name='Emp_name' value={data.Emp_name} onChange={InputHandler}/>
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <label htmlFor="" className="label form-label">Employee code</label>
-                                    <input type="text" className="input form-control" />
+                                    <input type="text" className="input form-control" name='Emp_code' value={data.Emp_code} onChange={InputHandler}/>
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <label htmlFor="" className="label form-label">Employee Mobile</label>
-                                    <input type="text" className="input form-control" />
+                                    <input type="text" className="input form-control" name='Emp_mobile' value={data.Emp_mobile} onChange={InputHandler}/>
                                 </div>
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                    <button className="btn btn-success">ADD</button>
+                                    <button className="btn btn-success" onClick={readvalue}>ADD</button>
                                 </div>
                             </div>
                         </div>
