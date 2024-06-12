@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from './NavBar'
+import axios from 'axios'
 
 const View = () => {
+
+    const [data, changedata] = useState([])
+    const fetchdata = () => {
+        axios.get("http://localhost:8080/View").then(
+            (response) => {
+                console.log(response.data)
+                changedata(response.data)
+
+            }
+        ).catch().finally()
+    }
+    useEffect(() => { fetchdata() }, [])
+
     return (
         <div>
-<NavBar/>
+            <NavBar />
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -23,13 +37,21 @@ const View = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
 
-                                            <td>p_name</td>
-                                            <td>p_name</td>
-                                            <td>p_name</td>
-                                           
-                                        </tr>
+                                        {
+                                            data.map(
+                                                (value, index) => {
+                                                    return <tr>
+
+                                                        <td>{value.Emp_name}</td>
+                                                        <td>{value.Emp_code}</td>
+                                                        <td>{value.Emp_mobile}</td>
+
+                                                    </tr>
+                                                }
+                                            )
+
+                                        }
 
 
 
