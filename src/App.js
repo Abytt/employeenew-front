@@ -8,18 +8,17 @@ import Search from './components/Search';
 import Delete from './components/Delete';
 
 
-
-
-
 function App() {
   return (
 
     <BrowserRouter>
     <Routes>
-     <Route path='/' element={<Add/>}/>
-   <Route path='/Search' element={<Search/>}/>
+
+      <Route path='/' element={<Add/>}/>
       <Route path='/Delete' element={<Delete/>}/>
- <Route path='/View' element={<View/>}/>
+      <Route path='/View' element={<View/>}/>
+      <Route path='/Search' element={<Search/>}/>
+
     </Routes>
     </BrowserRouter>
   );
