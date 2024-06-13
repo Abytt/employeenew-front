@@ -13,7 +13,7 @@ const NavBar = () => {
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/">Add</a>
-        <a class="nav-link" href="/search">Search</a>
+        <a class="nav-link" href="/Search">Search</a>
         <a class="nav-link" href="/Delete">Delete</a>
         <a class="nav-link" href="/View">View</a>
       </div>
