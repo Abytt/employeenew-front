@@ -2,9 +2,9 @@
 import './App.css';
 
 import View from './components/View';
-
 import Add from './components/Add';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Search from './components/Search';
 import Delete from './components/Delete';
 import Search from './components/Search';
 
@@ -18,6 +18,9 @@ function App() {
       <Route path='/Search' element={<Search/>}/>
       <Route path='/Delete' element={<Delete/>}/>
       <Route path='/View' element={<View/>}/>
+
+
+
     </Routes>
     </BrowserRouter>
   );
